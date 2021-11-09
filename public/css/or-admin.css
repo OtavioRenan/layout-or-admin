@@ -1,0 +1,149 @@
+:root
+{
+    --or-admin-primary: #35477D;
+    --or-admin-primary-1: #6C5B7B;
+    --or-admin-secundary: #F67280;
+    --or-admin-secundary-1: #C06C84;
+
+    --or-admin-warning: #FFD271;
+    --or-admin-success: #C3F584;
+    --or-admin-danger: #FA163F;
+    
+    --or-admin-white: #F2E3C9;
+    --or-admin-grey: #F5F5F5;
+    --or-admin-black1: #272121;
+    --or-admin-black2: #222;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background: var(--or-admin-white);
+}
+
+body .or-main
+{
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.or-main .container
+{
+    position: relative;
+    width: 100%;
+}
+
+.or-main .container .navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--or-admin-primary);
+    border-left: 10px solid var(--or-admin-primary);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.or-main .container .navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.or-main .container .navigation ul li
+{
+    position: relative;
+    width: 200%;
+    list-style: none;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.or-main .container .navigation ul li:hover
+{
+    background: var(--or-admin-white);
+}
+
+.or-main .container .navigation ul li:nth-child(1)
+{
+    margin-bottom: 40px;
+}
+
+.or-main .container .navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--or-admin-white);
+}
+
+.or-main .container .navigation ul li a:hover,
+.or-main .container .navigation ul li .hovered a
+{
+    color: var(--or-admin-primary);
+}
+
+.or-main .container .navigation ul li:hover a::before,
+.or-main .container .navigation ul li .hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--or-admin-white);
+    pointer-events: none;
+}
+
+.or-main .container .navigation ul li:hover a::after,
+.or-main .container .navigation ul li .hovered a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--or-admin-white);
+    pointer-events: none;
+}
+
+.or-main .container .navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.or-main .container .navigation ul li a .icon ion-icon
+{
+    font-size: 1.75em;
+}
+
+.or-main .container .navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+}
